@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "simple_zoom",
+  "version": "${version}",
+
+  "name": "Simple Zoom",
+  "description": "My first mod (and zoom, too)",
+  "authors": [],
+  "contact": {},
+
+  "license": "All-Rights-Reserved",
+  "icon": "assets/simple_zoom/icon.png",
+
+  "environment": "client",
+  "entrypoints": {
+    "client": ["xyz.anonym.simple_zoom.client.Simple_zoomClient"],
+    "main": ["xyz.anonym.simple_zoom.Simple_zoom"]
+  },
+
+  "mixins": [
+    "simple_zoom.mixins.json"
+    ,{
+      "config": "simple_zoom.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
